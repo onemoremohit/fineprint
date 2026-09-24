@@ -41,7 +41,8 @@ export default function ClauseCard({
     : 0;
 
   return (
-    <div
+    <article
+      aria-labelledby={`finding-heading-${finding.id}`}
       className={`glass-card p-5 ${tierClasses[finding.tier]} animate-fade-in-up ${
         !finding.verified ? 'opacity-75' : ''
       }`}
@@ -50,93 +51,82 @@ export default function ClauseCard({
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex items-center gap-2">
-          <span className="text-lg">{tierIcons[finding.tier]}</span>
+          <span aria-hidden="true" className="text-lg">{tierIcons[finding.tier]}</span>
           <div>
-            <p className="text-xs font-medium text-text-muted uppercase tracking-wider">
+            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">
               {tierLabels[finding.tier]}
             </p>
-            <h3 className="text-base font-semibold text-text mt-0.5">
+            <h3 id={`finding-heading-${finding.id}`} className="text-base font-semibold text-text mt-0.5">
               {finding.title}
             </h3>
           </div>
         </div>
 
         {/* Badges */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          {!finding.verified && (
-            <span className="px-2 py-0.5 rounded text-xs font-medium bg-warning/20 text-warning border border-warning/30">
-              ⚠ Unverified
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          {maxRisk >= 4 && (
+            <span
+              role="status"
+              aria-label="High legal risk severity"
+              className="px-2 py-0.5 rounded text-xs font-bold bg-danger/20 text-danger border border-danger/30"
+            >
+              High Risk
             </span>
           )}
-          {maxRisk > 0 && (
-            <span className={`px-2 py-0.5 rounded text-xs font-bold risk-${maxRisk}`}>
-              Risk {maxRisk}/5
+          {maxRisk === 3 && (
+            <span
+              role="status"
+              aria-label="Medium legal risk severity"
+              className="px-2 py-0.5 rounded text-xs font-semibold bg-warning/20 text-warning border border-warning/30"
+            >
+              Medium Risk
+            </span>
+          )}
+          {finding.verified ? (
+            <span
+              role="status"
+              aria-label="Citation verified against source text"
+              className="text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald border border-emerald/20 font-medium"
+            >
+              ✓ Verified
+            </span>
+          ) : (
+            <span
+              role="status"
+              aria-label="Unverified finding"
+              className="text-xs px-2 py-0.5 rounded bg-amber/10 text-amber border border-amber/20 font-medium"
+            >
+              Unverified
             </span>
           )}
         </div>
       </div>
 
-      {/* Verdict Badge */}
-      {verdict && verdict.verdict !== 'no_baseline' && (
-        <div className="mb-3">
-          <span
-            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${
-              verdict.verdict === 'standard'
-                ? 'verdict-standard'
-                : verdict.verdict === 'stricter_than_usual'
-                ? 'verdict-stricter'
-                : 'verdict-unusual'
-            }`}
-          >
-            {verdict.verdict === 'standard' && '✓ Standard'}
-            {verdict.verdict === 'stricter_than_usual' && '⚡ Stricter Than Usual'}
-            {verdict.verdict === 'unusual' && '🔴 Unusual'}
-          </span>
-          {verdict.explanation && (
-            <p className="text-xs text-text-muted mt-1.5 ml-1">{verdict.explanation}</p>
-          )}
+      {/* Baseline Verdict Badge */}
+      {verdict && (
+        <div className="mb-3 flex items-center gap-2">
+          <span className="text-xs text-text-muted font-medium">Market Baseline:</span>
+          <VerdictBadge verdict={verdict.verdict} />
         </div>
       )}
 
-      {/* Enforceability Flag */}
+      {/* Enforceability Status Badge */}
       {flag && (
-        <div className="mb-3 p-3 rounded-lg bg-surface-2/50 border border-border/50">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-medium text-text-secondary">Enforceability:</span>
-            <span
-              className={`text-xs font-semibold ${
-                flag.status === 'likely_unenforceable'
-                  ? 'text-danger'
-                  : flag.status === 'limited_enforceability'
-                  ? 'text-warning'
-                  : flag.status === 'likely_enforceable'
-                  ? 'text-success'
-                  : 'text-text-muted'
-              }`}
-            >
-              {flag.status.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
-            </span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-surface-3 text-text-muted">
-              {flag.confidence}
-            </span>
-          </div>
-          {flag.statute_ids.length > 0 && (
-            <p className="text-xs text-text-muted">
-              Statute: {flag.statute_ids.join(', ')}
-            </p>
-          )}
+        <div className="mb-3 flex items-center gap-2">
+          <span className="text-xs text-text-muted font-medium">Enforceability:</span>
+          <EnforceabilityBadge status={flag.status} />
         </div>
       )}
 
       {/* Body */}
       <div className="text-sm text-text-secondary leading-relaxed whitespace-pre-line">
-        {renderBody(finding.body)}
+        {finding.body}
       </div>
 
       {/* Citations */}
       {finding.citations.length > 0 && (
         <div className="mt-3 pt-3 border-t border-border/50">
-          <p className="text-xs text-text-muted mb-2">Citations:</p>
+          <p className="text-xs text-text-muted mb-2 font-semibold">Citations:</p>
           <div className="flex flex-wrap gap-2">
             {finding.citations.map((citation, idx) => (
               <CitationChip
@@ -152,12 +142,12 @@ export default function ClauseCard({
       {/* Ask a Lawyer section for option tier */}
       {finding.tier === 'option' && (
         <div className="mt-3 pt-3 border-t border-emerald/20">
-          <p className="text-xs text-emerald flex items-center gap-1">
-            👨‍⚖️ Confirm with a lawyer before acting on these points
+          <p className="text-xs text-emerald flex items-center gap-1 font-medium">
+            <span aria-hidden="true">👨‍⚖️</span> Confirm with a qualified lawyer before acting on these points
           </p>
         </div>
       )}
-    </div>
+    </article>
   );
 }
 
@@ -174,35 +164,59 @@ function CitationChip({
     }
   };
 
+  const isDoc = citation.kind === 'document' && citation.span;
+  const chipLabel = isDoc
+    ? `Jump to source document span: characters ${citation.span!.start} to ${citation.span!.end}`
+    : `Statute citation: ${citation.statute_id || 'Statutory authority'}`;
+
   return (
     <button
+      type="button"
       onClick={handleClick}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
-        citation.kind === 'document'
-          ? 'bg-amber/10 text-amber-light hover:bg-amber/20 border border-amber/20'
-          : 'bg-indigo/10 text-indigo-light hover:bg-indigo/20 border border-indigo/20'
+      aria-label={chipLabel}
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-indigo-400 ${
+        isDoc
+          ? 'bg-amber/10 text-amber-light hover:bg-amber/20 border border-amber/30'
+          : 'bg-indigo/10 text-indigo-light hover:bg-indigo/20 border border-indigo/30'
       }`}
-      title={citation.quote.slice(0, 100) + (citation.quote.length > 100 ? '...' : '')}
     >
-      {citation.kind === 'document' ? '📄' : '📜'}
-      {citation.kind === 'document'
-        ? `Span ${citation.span?.start}–${citation.span?.end}`
-        : citation.statute_id}
+      <span aria-hidden="true">{isDoc ? '📄' : '📜'}</span>
+      {isDoc
+        ? `Document [${citation.span!.start}–${citation.span!.end}]`
+        : citation.statute_id || 'Statute'}
     </button>
   );
 }
 
-function renderBody(body: string) {
-  // Simple markdown-like rendering for bold text
-  const parts = body.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, idx) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return (
-        <strong key={idx} className="text-text font-semibold">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    return <span key={idx}>{part}</span>;
-  });
+function VerdictBadge({ verdict }: { verdict: string }) {
+  const config: Record<string, { label: string; className: string }> = {
+    standard: { label: 'Standard', className: 'bg-emerald/10 text-emerald border-emerald/20' },
+    stricter_than_usual: { label: 'Stricter Than Usual', className: 'bg-amber/10 text-amber border-amber/20' },
+    unusual: { label: 'Unusual', className: 'bg-danger/10 text-danger border-danger/20' },
+    no_baseline: { label: 'No Baseline Data', className: 'bg-surface-3 text-text-muted border-border/50' },
+  };
+
+  const c = config[verdict] || config.no_baseline;
+
+  return (
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium border ${c.className}`}>
+      {c.label}
+    </span>
+  );
+}
+
+function EnforceabilityBadge({ status }: { status: string }) {
+  const config: Record<string, { label: string; className: string }> = {
+    likely_enforceable: { label: 'Likely Enforceable', className: 'bg-emerald/10 text-emerald border-emerald/20' },
+    likely_unenforceable: { label: 'Likely Unenforceable', className: 'bg-danger/10 text-danger border-danger/20' },
+    ambiguous: { label: 'Requires Legal Review', className: 'bg-amber/10 text-amber border-amber/20' },
+  };
+
+  const c = config[status] || { label: status, className: 'bg-surface-3 text-text-muted border-border/50' };
+
+  return (
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium border ${c.className}`}>
+      {c.label}
+    </span>
+  );
 }

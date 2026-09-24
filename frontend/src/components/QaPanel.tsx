@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { askQuestion } from '../lib/api';
-import type { QAMessage, Citation } from '../types';
+import type { QAMessage } from '../types';
 
 interface Props {
   documentId: string;
@@ -46,11 +46,11 @@ export default function QaPanel({ documentId, onCitationClick }: Props) {
         abstained: response.abstained,
       };
       setMessages((prev) => [...prev, assistantMsg]);
-    } catch (err) {
+    } catch {
       const errorMsg: QAMessage = {
         id: `e-${Date.now()}`,
         role: 'assistant',
-        content: 'An error occurred while processing your question. Please try again.',
+        content: 'An error occurred while analyzing the document for your question. Please try again.',
         abstained: true,
       };
       setMessages((prev) => [...prev, errorMsg]);
@@ -60,38 +60,44 @@ export default function QaPanel({ documentId, onCitationClick }: Props) {
   };
 
   const suggestedQuestions = [
-    'What is the notice period?',
+    'What is the notice period required for resignation?',
     'What happens if I break the training bond?',
     'Is there a non-compete clause?',
-    'Does this include health insurance?', // Likely to abstain
-    'Can I be transferred to another city?', // Likely to abstain
+    'Does this include health insurance coverage?', // Intentionally triggers grounded abstention
+    'Can I be transferred to another city?',        // Intentionally triggers grounded abstention
   ];
 
   return (
-    <div className="glass-card flex flex-col h-[600px] animate-fade-in-up">
+    <section aria-label="Grounded Q&A Section" className="glass-card flex flex-col h-[600px] animate-fade-in-up">
       {/* Header */}
       <div className="p-4 border-b border-border/50">
-        <h3 className="text-sm font-semibold">Ask About Your Document</h3>
-        <p className="text-xs text-text-muted mt-1">
-          Questions are answered using only your document's content. The system will
-          tell you when the answer isn't in the document.
+        <h3 className="text-sm font-semibold text-text">Ask About Your Document</h3>
+        <p className="text-xs text-text-muted mt-1 leading-relaxed">
+          Questions are answered strictly using your document's text. When details are absent, the system responsibly abstains to prevent hallucinations.
         </p>
       </div>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      {/* Messages Log Landmark */}
+      <div
+        role="log"
+        aria-live="polite"
+        aria-label="Document Q&A dialogue history"
+        className="flex-1 overflow-y-auto p-4 space-y-4"
+      >
         {messages.length === 0 && (
           <div className="space-y-3">
-            <p className="text-xs text-text-muted text-center mb-4">
-              Try asking a question:
+            <p className="text-xs text-text-muted text-center mb-4 font-medium">
+              Suggested questions to explore:
             </p>
             {suggestedQuestions.map((q) => (
               <button
                 key={q}
+                type="button"
                 onClick={() => setInput(q)}
-                className="block w-full text-left px-4 py-2.5 rounded-lg text-sm text-text-secondary bg-surface-2/50 hover:bg-surface-3/50 transition-colors border border-border/30 hover:border-border"
+                aria-label={`Use suggested question: ${q}`}
+                className="w-full text-left p-3 rounded-xl bg-surface-2/60 hover:bg-surface-2 border border-border/50 text-xs text-text-secondary hover:text-text transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-indigo-400"
               >
-                {q}
+                💡 {q}
               </button>
             ))}
           </div>
@@ -103,33 +109,34 @@ export default function QaPanel({ documentId, onCitationClick }: Props) {
             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-[85%] rounded-xl px-4 py-3 ${
+              className={`max-w-[85%] rounded-xl px-4 py-3 text-sm leading-relaxed ${
                 msg.role === 'user'
-                  ? 'bg-primary/20 text-text rounded-br-sm'
+                  ? 'bg-indigo-600 text-white rounded-br-sm shadow-md shadow-indigo-600/20'
                   : msg.abstained
-                  ? 'bg-surface-3/50 border border-warning/20 rounded-bl-sm'
-                  : 'bg-surface-2 rounded-bl-sm'
+                  ? 'bg-amber/10 border border-amber/30 text-amber-light rounded-bl-sm'
+                  : 'bg-surface-2 rounded-bl-sm border border-border/50 text-text'
               }`}
             >
               {msg.role === 'assistant' && msg.abstained && (
-                <div className="flex items-center gap-1.5 mb-2">
-                  <span className="text-xs px-2 py-0.5 rounded bg-warning/20 text-warning font-medium">
-                    ℹ️ Not in document
-                  </span>
+                <div className="flex items-center gap-1.5 text-xs text-amber font-semibold mb-1">
+                  <span aria-hidden="true">⚠️</span> Document Silent / Abstained
                 </div>
               )}
 
-              <p className="text-sm leading-relaxed">{msg.content}</p>
+              <p className="whitespace-pre-wrap">{msg.content}</p>
 
-              {/* Citation Chips */}
+              {/* Citations */}
               {msg.citations && msg.citations.length > 0 && (
-                <div className="mt-2 pt-2 border-t border-border/30 flex flex-wrap gap-1.5">
-                  {msg.citations.map((c: Citation, idx: number) =>
+                <div className="mt-2.5 pt-2 border-t border-border/40 flex flex-wrap gap-1.5">
+                  <span className="text-[10px] text-text-muted self-center mr-1">Source:</span>
+                  {msg.citations.map((c, idx) =>
                     c.kind === 'document' && c.span ? (
                       <button
                         key={idx}
+                        type="button"
                         onClick={() => onCitationClick(c.span!.start, c.span!.end)}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-amber/10 text-amber-light hover:bg-amber/20 transition-colors border border-amber/20"
+                        aria-label={`Jump to citation in document from character ${c.span.start} to ${c.span.end}`}
+                        className="text-[10px] px-2 py-0.5 rounded-full bg-amber/10 text-amber-light hover:bg-amber/20 transition-colors border border-amber/30 cursor-pointer focus-visible:ring-2 focus-visible:ring-indigo-400"
                       >
                         📄 Source [{c.span.start}–{c.span.end}]
                       </button>
@@ -149,12 +156,13 @@ export default function QaPanel({ documentId, onCitationClick }: Props) {
         ))}
 
         {loading && (
-          <div className="flex justify-start">
-            <div className="bg-surface-2 rounded-xl rounded-bl-sm px-4 py-3">
-              <div className="flex gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-text-muted animate-pulse" />
-                <div className="w-2 h-2 rounded-full bg-text-muted animate-pulse" style={{ animationDelay: '0.2s' }} />
-                <div className="w-2 h-2 rounded-full bg-text-muted animate-pulse" style={{ animationDelay: '0.4s' }} />
+          <div className="flex justify-start" role="status" aria-label="Analyzing document to answer your question...">
+            <div className="bg-surface-2 rounded-xl rounded-bl-sm px-4 py-3 border border-border/40 flex items-center gap-2">
+              <span className="text-xs text-text-secondary">Reviewing text...</span>
+              <div aria-hidden="true" className="flex gap-1.5">
+                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" style={{ animationDelay: '0.4s' }} />
               </div>
             </div>
           </div>
@@ -163,26 +171,33 @@ export default function QaPanel({ documentId, onCitationClick }: Props) {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
+      {/* Input Form */}
       <form onSubmit={handleSubmit} className="p-4 border-t border-border/50">
         <div className="flex gap-2">
+          <label htmlFor="qa-question-input" className="sr-only">
+            Ask a question about your document
+          </label>
           <input
+            id="qa-question-input"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about your document..."
-            className="flex-1 px-4 py-2.5 rounded-xl bg-surface-2 border border-border text-sm text-text placeholder:text-text-muted focus:outline-none focus:border-primary transition-colors"
+            placeholder="Ask about notice periods, bonds, benefits..."
+            aria-label="Ask a question about your document"
+            className="flex-1 px-4 py-2.5 rounded-xl bg-surface-2 border border-border text-sm text-text placeholder:text-text-muted focus:outline-none focus:border-indigo-400 transition-colors"
             disabled={loading}
           />
           <button
             type="submit"
             disabled={!input.trim() || loading}
-            className="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Submit question"
+            aria-busy={loading}
+            className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer focus-visible:ring-2 focus-visible:ring-indigo-400"
           >
             Ask
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

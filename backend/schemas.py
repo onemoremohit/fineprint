@@ -172,8 +172,13 @@ class AnalysisResponse(BaseModel):
 
 
 class QARequest(BaseModel):
-    """Request body for POST /api/documents/{id}/ask"""
-    question: str
+    """Request body for POST /api/documents/{id}/ask with security validation."""
+    question: str = Field(
+        ...,
+        min_length=2,
+        max_length=1000,
+        description="The user question regarding the document text",
+    )
 
 
 class QAResponse(BaseModel):

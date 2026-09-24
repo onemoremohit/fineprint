@@ -239,26 +239,28 @@ async def analyze_document(doc_id: str):
         return fixture
 
     # Real analysis pipeline
-    from segment.clauses import segment_document
+    from segment.clauses import segment_clauses
+    from analyze.classify import classify_clauses
     from analyze.baseline import compare_baselines
     from analyze.statute import check_enforceability
     from analyze.obligations import extract_obligations
-    from analyze.findings import synthesize_findings
+    from outputs.report import assemble_findings
     from analyze.verify import verify_findings
     from db import store_clauses
 
-    clauses = await segment_document(full_text, doc_id)
+    clauses = await segment_clauses(full_text)
+    clauses = await classify_clauses(clauses, full_text)
     store_clauses(doc_id, clauses)
 
     baseline_verdicts = await compare_baselines(clauses)
     enforceability_flags = await check_enforceability(clauses)
     obligations = await extract_obligations(clauses, full_text)
 
-    raw_findings = await synthesize_findings(
+    raw_findings = assemble_findings(
         clauses, baseline_verdicts, enforceability_flags, obligations, full_text
     )
 
-    verified_findings = verify_findings(raw_findings, full_text, clauses)
+    verified_findings = await verify_findings(raw_findings, full_text)
 
     result = AnalysisResponse(
         document_id=doc_id,

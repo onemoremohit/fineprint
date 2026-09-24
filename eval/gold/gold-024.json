@@ -1,0 +1,73 @@
+{
+  "doc_id": "gold-024",
+  "title": "Senior Cloud Consultant Agreement \u2014 Tier 4",
+  "full_text": "SENIOR CLOUD CONSULTANT AGREEMENT \u2014 TIER 4\n\nDate: 10th February 2025\nCompany: Enterprise Horizon 24 Pvt. Ltd.\nRole: Senior Cloud Consultant\n\n1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 26,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.\n\n2. Probationary Period\nThe Employee shall remain on probation for three (3) months from the date of joining. Performance will be reviewed prior to confirmation.\n\n3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 45 days written notice or basic salary in lieu thereof.\n\n5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.\n\n6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.\n\n7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Pune, Maharashtra have exclusive jurisdiction.\n\nSincerely,\nAuthorised Signatory\nEnterprise Horizon 24 Pvt. Ltd.",
+  "clauses": [
+    {
+      "heading": "1. Compensation and Benefits",
+      "text": "1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 26,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.",
+      "start": 141,
+      "end": 321,
+      "type": "compensation",
+      "risk_score": 1
+    },
+    {
+      "heading": "2. Probationary Period",
+      "text": "2. Probationary Period\nThe Employee shall remain on probation for three (3) months from the date of joining. Performance will be reviewed prior to confirmation.",
+      "start": 323,
+      "end": 483,
+      "type": "probation",
+      "risk_score": 2
+    },
+    {
+      "heading": "3. Notice Period and Separation",
+      "text": "3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 45 days written notice or basic salary in lieu thereof.",
+      "start": 485,
+      "end": 647,
+      "type": "notice_period",
+      "risk_score": 2
+    },
+    {
+      "heading": "5. Restrictive Covenant and Non-Compete",
+      "text": "5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.",
+      "start": 649,
+      "end": 812,
+      "type": "non_compete",
+      "risk_score": 5
+    },
+    {
+      "heading": "6. Confidentiality and Intellectual Property",
+      "text": "6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.",
+      "start": 814,
+      "end": 994,
+      "type": "ip_assignment",
+      "risk_score": 2
+    },
+    {
+      "heading": "7. Governing Law and Jurisdiction",
+      "text": "7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Pune, Maharashtra have exclusive jurisdiction.",
+      "start": 996,
+      "end": 1157,
+      "type": "jurisdiction",
+      "risk_score": 1
+    }
+  ],
+  "obligations": [
+    {
+      "party": "counterparty",
+      "action": "Pay compensation of INR 26,00,000 per annum",
+      "amount": "INR 26,00,000"
+    },
+    {
+      "party": "user",
+      "action": "Provide 45 days notice upon resignation"
+    }
+  ],
+  "unanswerable_questions": [
+    "Does Enterprise Horizon 24 Pvt. Ltd. provide free hot lunch in the office cafeteria?",
+    "What is the maternity leave stipend granted after 3 years?",
+    "Can employees bring pet rabbits to the Pune, Maharashtra office?",
+    "What was the annual audited gross revenue of the company?",
+    "Is free rooftop helicopter parking offered to engineers?"
+  ]
+}

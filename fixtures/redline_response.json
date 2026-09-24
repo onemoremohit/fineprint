@@ -1,0 +1,23 @@
+{
+  "redlines": [
+    {
+      "clause_id": "c-005",
+      "current_text": "For a period of twelve (12) months following the termination of employment for any reason, the Employee shall not, directly or indirectly, engage in, be employed by, or provide services to any business that competes with the Company within India.",
+      "suggested_text": "During the term of employment, the Employee shall not, directly or indirectly, engage in any business that directly competes with the Company's current line of business within the city where the Employee is primarily stationed.",
+      "rationale": "The original clause extends the non-compete obligation to 12 months post-termination across all of India, which is likely void under Section 27 of the Indian Contract Act. The suggested revision limits the restriction to the employment period only (which is generally permissible) and narrows the geographic scope."
+    },
+    {
+      "clause_id": "c-004",
+      "current_text": "In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred.",
+      "suggested_text": "In the event the Employee voluntarily resigns before the completion of the bond period, the Employee shall be liable to repay a proportionate amount of documented training costs, calculated as: (Remaining Bond Months / Total Bond Months) × Actual Documented Training Costs, not to exceed INR 3,00,000.",
+      "rationale": "The suggested revision introduces proportional reduction based on time served, limits recovery to actual documented costs, caps the maximum amount, and removes the provision applying the bond to termination-for-cause scenarios (which is unusual and potentially unfair to the employee)."
+    },
+    {
+      "clause_id": "c-003",
+      "current_text": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. The Employee shall not be entitled to any notice pay-out if terminated for cause.",
+      "suggested_text": "After confirmation, either party may terminate this agreement by giving sixty (60) days written notice or two months' salary in lieu thereof.",
+      "rationale": "Reduces the notice period from 90 to 60 days, which remains reasonable while providing more flexibility. Removes the asymmetric provision denying notice pay-out for cause-based termination, ensuring both parties have equal obligations."
+    }
+  ],
+  "email_draft": "Subject: Discussion Points on Employment Offer — [Your Name]\n\nDear [Hiring Manager],\n\nThank you for the offer letter dated [Date]. I am excited about the opportunity to join [Company Name] and contribute to the team.\n\nAfter reviewing the terms carefully, I would appreciate the opportunity to discuss a few points before we finalize:\n\n1. **Non-Compete Clause (Clause 5)**: The current post-termination restriction covers all of India for 12 months. I understand the Company's interest in protecting its business, and I would be comfortable with a restriction that applies during the term of employment. Could we discuss limiting the scope to the employment period?\n\n2. **Training Bond (Clause 4)**: I am committed to growing with the Company long-term. For the training bond, would it be possible to introduce a proportional reduction mechanism — so that if I have served a significant portion of the bond period, the recoverable amount reflects the remaining time? I would also appreciate clarity on what specific training costs the bond covers.\n\n3. **Notice Period (Clause 3)**: The 90-day notice period is on the longer side for this role level. Would the Company be open to a 60-day notice period, which I believe still provides adequate transition time?\n\nI raise these points in the spirit of reaching a mutually fair arrangement. I am happy to discuss these at your convenience.\n\nWarm regards,\n[Your Name]\n[Contact Details]"
+}

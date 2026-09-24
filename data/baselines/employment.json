@@ -1,0 +1,330 @@
+[
+  {
+    "id": "b-compensation",
+    "clause_type": "compensation",
+    "canonical_text": "The Company shall pay the Employee a gross annual salary, payable in twelve equal monthly instalments, subject to applicable deductions as per prevailing tax laws.",
+    "typical_range": "Varies by role and industry; standard structure is monthly payment with tax deductions",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["deferred payment beyond monthly cycle", "salary reduction clauses", "performance-linked base pay reduction"]
+  },
+  {
+    "id": "b-notice-period",
+    "clause_type": "notice_period",
+    "canonical_text": "Either party may terminate this agreement by giving thirty (30) days written notice.",
+    "typical_range": "30-60 days for non-managerial roles; 60-90 days for managerial/senior roles",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["notice period exceeding 90 days", "asymmetric notice (longer for employee than employer)", "notice buy-out at more than one month salary", "garden leave with restricted activity"]
+  },
+  {
+    "id": "b-probation",
+    "clause_type": "probation",
+    "canonical_text": "The Employee shall be on probation for a period of six (6) months from the date of joining. During probation, either party may terminate with fifteen (15) days notice.",
+    "typical_range": "3-6 months probation; 7-15 days notice during probation",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["probation exceeding 6 months", "automatic extension of probation without criteria", "no notice required from employer during probation", "reduced benefits during extended probation"]
+  },
+  {
+    "id": "b-training-bond",
+    "clause_type": "training_bond",
+    "canonical_text": "The Employee agrees to serve the Company for a minimum period of one (1) year from the date of completion of training. In the event of early separation, the Employee shall repay a proportionate amount of the training costs.",
+    "typical_range": "1-2 years bond period; proportionate repayment based on time served",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["bond period exceeding 2 years", "fixed penalty amount without proportional reduction", "bond applies to termination for cause", "no itemization of training costs", "bond amount exceeds 50% of annual salary", "bond on general onboarding rather than specialized training"]
+  },
+  {
+    "id": "b-non-compete",
+    "clause_type": "non_compete",
+    "canonical_text": "The Employee shall not engage in any competing business during the term of employment.",
+    "typical_range": "During-employment non-compete is standard; post-termination non-compete is unusual in India",
+    "source_note": "Composite of publicly available standard employment templates; Indian legal practice",
+    "stricter_signals": ["post-termination restriction of any duration", "geographic scope covering all of India or multiple states", "broad definition of 'competing business'", "applies regardless of reason for termination", "includes indirect engagement or consulting"]
+  },
+  {
+    "id": "b-non-solicit",
+    "clause_type": "non_solicit",
+    "canonical_text": "During the term of employment, the Employee shall not solicit or entice away any employee, consultant, or client of the Company.",
+    "typical_range": "During-employment is standard; post-termination 6-12 months is common but enforceability varies",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["post-termination restriction exceeding 12 months", "covers all contacts rather than just clients you directly worked with", "includes passive receipt of applications from former colleagues", "covers vendors and partners in addition to clients"]
+  },
+  {
+    "id": "b-confidentiality",
+    "clause_type": "confidentiality",
+    "canonical_text": "The Employee shall maintain confidentiality of all proprietary information during and after employment.",
+    "typical_range": "Perpetual for trade secrets; 2-5 years for general confidential information",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["overly broad definition of confidential information covering publicly available knowledge", "no carve-outs for independently developed information", "criminal liability provisions beyond civil remedies", "restrictions on discussing employment terms/compensation"]
+  },
+  {
+    "id": "b-ip-assignment",
+    "clause_type": "ip_assignment",
+    "canonical_text": "Intellectual property created in the course of employment and related to the Company's business shall belong to the Company.",
+    "typical_range": "Work-related IP assignment is standard; scope should be limited to company business",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["covers all IP created during employment period regardless of relation to work", "no carve-out for prior inventions", "no carve-out for personal projects on own time and resources", "includes moral rights waiver", "covers IP created using personal resources outside work hours"]
+  },
+  {
+    "id": "b-termination",
+    "clause_type": "termination",
+    "canonical_text": "Either party may terminate this agreement by giving the stipulated notice period. The Company may terminate immediately for cause, including but not limited to material breach, misconduct, or conviction of a criminal offence.",
+    "typical_range": "Mutual termination with notice; immediate termination for defined cause",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["unilateral termination right for employer without cause and without notice", "vague or undefined 'cause' categories", "no opportunity to cure before termination", "forfeiture of all benefits on termination for any reason", "termination linked to subjective performance assessment"]
+  },
+  {
+    "id": "b-penalty-liquidated-damages",
+    "clause_type": "penalty_liquidated_damages",
+    "canonical_text": "In the event of breach by the Employee, the Employee shall pay the Company reasonable damages as a genuine pre-estimate of loss, not exceeding the amount specified.",
+    "typical_range": "Amount should reflect genuine pre-estimate of actual loss; subject to court reduction under Section 74 ICA",
+    "source_note": "Composite of publicly available standard employment templates; Indian Contract Act s.74 jurisprudence",
+    "stricter_signals": ["penalty amount exceeding 6 months salary", "no cap on damages", "penalty for breach of non-compete (which may itself be void)", "cumulative penalties for multiple breach types", "penalty without any relationship to actual loss"]
+  },
+  {
+    "id": "b-indemnity",
+    "clause_type": "indemnity",
+    "canonical_text": "The Employee shall indemnify the Company against any losses arising from the Employee's wilful misconduct or negligence in the performance of duties.",
+    "typical_range": "Indemnity limited to wilful misconduct or gross negligence; should not cover ordinary course of business errors",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["uncapped indemnity", "indemnity for ordinary negligence", "indemnity surviving termination indefinitely", "indemnity covering third-party claims not caused by employee", "reverse indemnity (employee indemnifies for employer's decisions)"]
+  },
+  {
+    "id": "b-dispute-resolution",
+    "clause_type": "dispute_resolution",
+    "canonical_text": "The parties shall attempt to resolve any dispute through good faith negotiation before resorting to formal proceedings.",
+    "typical_range": "Negotiation → Mediation → Arbitration/Litigation is standard escalation",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["mandatory arbitration with employer-appointed arbitrator", "waiver of right to access labour courts", "dispute resolution in a distant city", "shortened limitation periods", "cost-bearing provisions that discourage dispute filing"]
+  },
+  {
+    "id": "b-jurisdiction",
+    "clause_type": "jurisdiction",
+    "canonical_text": "Disputes shall be subject to the exclusive jurisdiction of the courts in [City], [State].",
+    "typical_range": "Courts at the employer's principal place of business; should allow employee's location for employment disputes",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["jurisdiction in a city far from where employee works", "exclusive jurisdiction waiving employee's right to file at their own location", "foreign jurisdiction clause"]
+  },
+  {
+    "id": "b-arbitration",
+    "clause_type": "arbitration",
+    "canonical_text": "Any dispute arising under this agreement shall be referred to arbitration under the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted by a sole arbitrator mutually appointed by the parties.",
+    "typical_range": "Sole arbitrator, mutually appointed; seat at employer's principal place of business",
+    "source_note": "Composite of publicly available standard employment templates; Arbitration and Conciliation Act 1996",
+    "stricter_signals": ["employer appoints sole arbitrator unilaterally", "three-arbitrator panel (expensive for employee)", "arbitration in a distant location", "employee bears all arbitration costs", "confidentiality clause preventing disclosure of outcome"]
+  },
+  {
+    "id": "b-working-hours",
+    "clause_type": "working_hours",
+    "canonical_text": "The normal working hours shall be eight (8) hours per day, five days a week, subject to the requirements of the role.",
+    "typical_range": "8-9 hours per day, 5-6 days per week; overtime provisions per Factories Act / SE Act",
+    "source_note": "Composite of publicly available standard employment templates; State SE Acts",
+    "stricter_signals": ["unlimited working hours obligation", "waiver of overtime compensation", "mandatory availability outside work hours without compensation", "no cap on weekly hours"]
+  },
+  {
+    "id": "b-leave",
+    "clause_type": "leave",
+    "canonical_text": "The Employee shall be entitled to annual leave as per the Company's leave policy, which shall not be less than the statutory minimum.",
+    "typical_range": "15-24 days annual leave; 12 days casual leave; 12 days sick leave (varies by state)",
+    "source_note": "Composite of publicly available standard employment templates; State SE Acts",
+    "stricter_signals": ["leave entitlement below statutory minimum", "forfeiture of unused leave without encashment", "leave approval solely at employer's discretion with no guaranteed minimum", "no carry-forward provisions"]
+  },
+  {
+    "id": "b-benefits",
+    "clause_type": "benefits",
+    "canonical_text": "The Employee shall be eligible for benefits as per the Company's policies, including provident fund contributions as required by law.",
+    "typical_range": "PF, ESI (if applicable), gratuity after 5 years, medical insurance (employer policy)",
+    "source_note": "Composite of publicly available standard employment templates; EPF Act, ESI Act",
+    "stricter_signals": ["exclusion from statutory benefits", "benefits contingent on meeting performance targets", "clawback of benefits on early separation", "no clarity on gratuity eligibility"]
+  },
+  {
+    "id": "b-amendment",
+    "clause_type": "amendment",
+    "canonical_text": "This agreement may be amended by mutual written consent of both parties.",
+    "typical_range": "Mutual written consent is standard",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["unilateral amendment right for employer", "amendment by mere notice without consent", "deemed consent if employee continues working after policy change", "broad reservation of right to change 'any terms at any time'"]
+  },
+  {
+    "id": "b-severability",
+    "clause_type": "severability",
+    "canonical_text": "If any provision of this agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.",
+    "typical_range": "Standard boilerplate; included in most agreements",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["no severability clause (rare but risky)", "blue-pencil clause allowing court to rewrite terms rather than strike them"]
+  },
+  {
+    "id": "b-notice-period-probation",
+    "clause_type": "notice_period",
+    "canonical_text": "During the probation period, either party may terminate this agreement by giving seven (7) days written notice.",
+    "typical_range": "7-15 days during probation",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["no notice required from employer during probation", "full notice period applying during probation", "probation termination without any reason or notice"]
+  },
+  {
+    "id": "b-training-bond-proportional",
+    "clause_type": "training_bond",
+    "canonical_text": "In the event of early separation, the Employee shall repay a proportionate amount of the documented training costs, calculated based on the remaining bond period.",
+    "typical_range": "Proportional reduction is considered fair practice; full amount recovery is stricter",
+    "source_note": "Composite of publicly available standard employment templates; Section 74 ICA jurisprudence",
+    "stricter_signals": ["no proportional reduction", "recovery of amounts unrelated to training (e.g., salary, relocation)", "bond applying to employer-initiated termination", "bond on mandatory industry certifications"]
+  },
+  {
+    "id": "b-non-compete-during",
+    "clause_type": "non_compete",
+    "canonical_text": "During the term of employment, the Employee shall devote their full working time and attention to the Company's business and shall not engage in any other employment or business without prior written consent.",
+    "typical_range": "Full-time exclusivity during employment is standard for full-time roles",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["prohibition on all outside activities including volunteering", "prohibition surviving into personal time for non-competing activities", "no exception for pre-existing personal projects"]
+  },
+  {
+    "id": "b-ip-prior-inventions",
+    "clause_type": "ip_assignment",
+    "canonical_text": "The Employee shall disclose any prior inventions or intellectual property at the time of joining. Such prior inventions shall remain the property of the Employee unless incorporated into the Company's products or services.",
+    "typical_range": "Prior invention disclosure and carve-out is best practice",
+    "source_note": "Composite of publicly available standard employment templates; US/India tech industry practice",
+    "stricter_signals": ["no prior invention carve-out", "all prior IP deemed assigned upon incorporation without additional compensation", "no process for resolving ownership disputes"]
+  },
+  {
+    "id": "b-termination-for-cause",
+    "clause_type": "termination",
+    "canonical_text": "The Company may terminate this agreement immediately for cause, including material breach of agreement, wilful misconduct, conviction of a criminal offence, or gross negligence. The Employee shall be given a reasonable opportunity to be heard before termination for cause.",
+    "typical_range": "Defined cause categories with opportunity to be heard is standard",
+    "source_note": "Composite of publicly available standard employment templates; principles of natural justice",
+    "stricter_signals": ["no opportunity to be heard", "subjective cause categories ('unsatisfactory performance' without metrics)", "termination for cause includes breach of any company policy (even minor)", "no severance or notice pay on termination for cause"]
+  },
+  {
+    "id": "b-confidentiality-scope",
+    "clause_type": "confidentiality",
+    "canonical_text": "Confidential Information means any non-public information relating to the Company's business, including trade secrets, customer lists, financial data, and technical know-how, but excluding information that is publicly available or independently developed.",
+    "typical_range": "Defined scope with standard exclusions (public domain, independently developed, required by law)",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["no exclusions for publicly available information", "includes information the employee already knew", "covers information learned after termination", "penalty for inadvertent disclosure equal to wilful disclosure"]
+  },
+  {
+    "id": "b-relocation",
+    "clause_type": "other",
+    "canonical_text": "The Company may transfer the Employee to any of its offices within India with reasonable notice and relocation support.",
+    "typical_range": "Transfer with 30 days notice and relocation allowance is standard",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["transfer without notice", "no relocation support", "transfer as a punitive measure", "mandatory international relocation without consent"]
+  },
+  {
+    "id": "b-entire-agreement",
+    "clause_type": "other",
+    "canonical_text": "This agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements.",
+    "typical_range": "Standard boilerplate; commonly included",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["oral modifications permitted (creates uncertainty)", "merger clause that eliminates verbal promises made during hiring"]
+  },
+  {
+    "id": "b-governing-law",
+    "clause_type": "jurisdiction",
+    "canonical_text": "This agreement shall be governed by and construed in accordance with the laws of India.",
+    "typical_range": "Indian law for India-based employment is standard",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["foreign governing law for India-based employment", "choice of law that overrides mandatory Indian employment protections"]
+  },
+  {
+    "id": "b-force-majeure",
+    "clause_type": "other",
+    "canonical_text": "Neither party shall be liable for failure to perform obligations due to circumstances beyond reasonable control, including natural disasters, pandemics, and government actions.",
+    "typical_range": "Standard force majeure clause; increasingly includes pandemic provisions post-COVID",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["employer can suspend salary during force majeure without limit", "force majeure allows unilateral termination without notice", "no employee protections during force majeure period"]
+  },
+  {
+    "id": "b-data-privacy",
+    "clause_type": "confidentiality",
+    "canonical_text": "The Company shall collect, process, and store the Employee's personal data in accordance with applicable data protection laws and the Company's privacy policy.",
+    "typical_range": "Standard data privacy clause; should reference DPDP Act 2023 provisions",
+    "source_note": "Composite of publicly available standard employment templates; Digital Personal Data Protection Act 2023",
+    "stricter_signals": ["blanket consent to data processing without purpose limitation", "data sharing with third parties without notification", "no right to access or correct personal data", "data retention beyond employment term without justification"]
+  },
+  {
+    "id": "b-background-check",
+    "clause_type": "other",
+    "canonical_text": "This offer is contingent upon successful completion of background verification. Any material misrepresentation in your application may result in termination.",
+    "typical_range": "Standard contingency clause; verification typically covers education, employment history, criminal records",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["background check scope includes social media monitoring", "verification of family members", "indefinite right to re-verify after joining", "termination for minor discrepancies"]
+  },
+  {
+    "id": "b-gratuity",
+    "clause_type": "benefits",
+    "canonical_text": "The Employee shall be eligible for gratuity as per the Payment of Gratuity Act, 1972, upon completion of five years of continuous service.",
+    "typical_range": "Statutory entitlement after 5 years; 15 days wages per year of service",
+    "source_note": "Payment of Gratuity Act, 1972; publicly available employment templates",
+    "stricter_signals": ["forfeiture of gratuity on termination for cause (beyond statutory grounds)", "calculation on basic salary only when CTC includes substantial allowances", "non-payment or delayed payment provisions"]
+  },
+  {
+    "id": "b-probation-extension",
+    "clause_type": "probation",
+    "canonical_text": "The probation period may be extended by up to three (3) months at the Company's discretion, with written notice to the Employee citing specific performance areas for improvement.",
+    "typical_range": "One extension of 1-3 months with clear criteria is standard",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["unlimited extensions", "no criteria for extension", "reduced pay during extended probation", "no confirmation deemed denial"]
+  },
+  {
+    "id": "b-exit-process",
+    "clause_type": "termination",
+    "canonical_text": "Upon termination, the Employee shall return all Company property, complete knowledge transfer, and obtain clearance from relevant departments.",
+    "typical_range": "Standard exit process; final settlement within 30-45 days",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["withholding final settlement pending return of property (may violate wage laws)", "no timeline for final settlement", "mandatory non-disparagement post-exit", "exit interview testimony usable against employee"]
+  },
+  {
+    "id": "b-bonus",
+    "clause_type": "compensation",
+    "canonical_text": "The Employee may be eligible for an annual performance bonus based on individual and Company performance, at the Company's discretion.",
+    "typical_range": "Discretionary bonus based on performance; 10-30% of CTC for mid-level roles",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["bonus clawback for employees who resign within N months of payout", "no minimum bonus guarantee when described as part of CTC", "bonus contingent on factors entirely outside employee's control"]
+  },
+  {
+    "id": "b-notice-buyout",
+    "clause_type": "notice_period",
+    "canonical_text": "In lieu of serving the notice period, either party may pay the equivalent of the notice period salary to the other party.",
+    "typical_range": "Mutual notice buy-out at basic salary or gross salary",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["buy-out at CTC including benefits (inflates cost)", "employer can mandate serving full notice without buy-out option", "employee must serve but employer can buy-out (asymmetric)"]
+  },
+  {
+    "id": "b-moonlighting",
+    "clause_type": "other",
+    "canonical_text": "The Employee may engage in outside activities that do not conflict with the Company's business interests, provided prior written approval is obtained.",
+    "typical_range": "Prior approval requirement is standard for full-time roles",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["blanket prohibition on all outside activities including volunteering", "no approval process (just prohibition)", "includes activities during personal time that don't compete"]
+  },
+  {
+    "id": "b-code-of-conduct",
+    "clause_type": "other",
+    "canonical_text": "The Employee shall comply with the Company's Code of Conduct and all applicable policies as amended from time to time.",
+    "typical_range": "Standard compliance clause; policies should be made available to employee",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["policies not provided at time of signing", "retroactive application of new policies", "termination for violation of any policy regardless of severity"]
+  },
+  {
+    "id": "b-insurance",
+    "clause_type": "benefits",
+    "canonical_text": "The Company shall provide group medical insurance coverage for the Employee and their dependents as per the Company's insurance policy.",
+    "typical_range": "Group medical insurance covering employee + family; ₹3-5 lakh coverage is standard for mid-level",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["no insurance coverage", "employee-only coverage without dependents", "coverage significantly below industry standard", "coverage void during probation"]
+  },
+  {
+    "id": "b-pf-contribution",
+    "clause_type": "benefits",
+    "canonical_text": "The Company shall make contributions to the Employee's Provident Fund account as required under the Employees' Provident Funds and Miscellaneous Provisions Act, 1952.",
+    "typical_range": "12% of basic salary by both employer and employee; statutory requirement",
+    "source_note": "EPF Act, 1952; publicly available employment templates",
+    "stricter_signals": ["PF contribution on lower basic component (legal but disadvantageous)", "opting out of PF without employee consent", "VPF restrictions"]
+  },
+  {
+    "id": "b-resignation-process",
+    "clause_type": "termination",
+    "canonical_text": "The Employee may resign by submitting a written resignation to the Company. The notice period shall commence from the date of acceptance of the resignation by the Company.",
+    "typical_range": "Written resignation with notice period starting from submission date",
+    "source_note": "Composite of publicly available standard employment templates",
+    "stricter_signals": ["notice period starts only from acceptance (delays departure)", "Company may reject resignation (unusual)", "mandatory cooling-off period before resignation is effective", "resignation requires multiple approvals"]
+  }
+]

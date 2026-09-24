@@ -1,0 +1,86 @@
+{
+  "doc_id": "gold-016",
+  "title": "Senior Software Engineer Agreement \u2014 Tier 3",
+  "full_text": "SENIOR SOFTWARE ENGINEER AGREEMENT \u2014 TIER 3\n\nDate: 10th February 2025\nCompany: Enterprise Horizon 16 Pvt. Ltd.\nRole: Senior Software Engineer\n\n1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 18,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.\n\n2. Probationary Period\nThe Employee shall remain on probation for six (6) months from the date of joining. Performance will be reviewed prior to confirmation.\n\n3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 90 days written notice or basic salary in lieu thereof.\n\n4. Service Commitment and Training Bond\nThe Employee agrees to remain in service for at least 2 years following completion of training. In the event of breach, Employee shall pay INR 2,50,000 as liquidated damages.\n\n5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.\n\n6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.\n\n7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Bengaluru, Karnataka have exclusive jurisdiction.\n\nSincerely,\nAuthorised Signatory\nEnterprise Horizon 16 Pvt. Ltd.",
+  "clauses": [
+    {
+      "heading": "1. Compensation and Benefits",
+      "text": "1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 18,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.",
+      "start": 143,
+      "end": 323,
+      "type": "compensation",
+      "risk_score": 1
+    },
+    {
+      "heading": "2. Probationary Period",
+      "text": "2. Probationary Period\nThe Employee shall remain on probation for six (6) months from the date of joining. Performance will be reviewed prior to confirmation.",
+      "start": 325,
+      "end": 483,
+      "type": "probation",
+      "risk_score": 2
+    },
+    {
+      "heading": "3. Notice Period and Separation",
+      "text": "3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 90 days written notice or basic salary in lieu thereof.",
+      "start": 485,
+      "end": 647,
+      "type": "notice_period",
+      "risk_score": 2
+    },
+    {
+      "heading": "4. Service Commitment and Training Bond",
+      "text": "4. Service Commitment and Training Bond\nThe Employee agrees to remain in service for at least 2 years following completion of training. In the event of breach, Employee shall pay INR 2,50,000 as liquidated damages.",
+      "start": 649,
+      "end": 863,
+      "type": "training_bond",
+      "risk_score": 4
+    },
+    {
+      "heading": "5. Restrictive Covenant and Non-Compete",
+      "text": "5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.",
+      "start": 865,
+      "end": 1028,
+      "type": "non_compete",
+      "risk_score": 5
+    },
+    {
+      "heading": "6. Confidentiality and Intellectual Property",
+      "text": "6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.",
+      "start": 1030,
+      "end": 1210,
+      "type": "ip_assignment",
+      "risk_score": 2
+    },
+    {
+      "heading": "7. Governing Law and Jurisdiction",
+      "text": "7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Bengaluru, Karnataka have exclusive jurisdiction.",
+      "start": 1212,
+      "end": 1376,
+      "type": "jurisdiction",
+      "risk_score": 1
+    }
+  ],
+  "obligations": [
+    {
+      "party": "counterparty",
+      "action": "Pay compensation of INR 18,00,000 per annum",
+      "amount": "INR 18,00,000"
+    },
+    {
+      "party": "user",
+      "action": "Provide 90 days notice upon resignation"
+    },
+    {
+      "party": "user",
+      "action": "Pay liquidated damages of INR 2,50,000 if resigning before 2 years",
+      "amount": "INR 2,50,000"
+    }
+  ],
+  "unanswerable_questions": [
+    "Does Enterprise Horizon 16 Pvt. Ltd. provide free hot lunch in the office cafeteria?",
+    "What is the maternity leave stipend granted after 3 years?",
+    "Can employees bring pet rabbits to the Bengaluru, Karnataka office?",
+    "What was the annual audited gross revenue of the company?",
+    "Is free rooftop helicopter parking offered to engineers?"
+  ]
+}

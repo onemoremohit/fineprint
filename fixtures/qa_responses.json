@@ -1,0 +1,56 @@
+[
+  {
+    "question": "What is the notice period after confirmation?",
+    "response": {
+      "answer": "After confirmation, either party may terminate the agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. However, the Employee is not entitled to any notice pay-out if terminated for cause.",
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 657, "end": 903, "page": 1},
+          "statute_id": null,
+          "quote": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. The Employee shall not be entitled to any notice pay-out if terminated for cause."
+        }
+      ],
+      "abstained": false
+    }
+  },
+  {
+    "question": "Does the agreement include health insurance benefits?",
+    "response": {
+      "answer": "This document does not address health insurance benefits. The agreement covers compensation, probation, notice period, training bond, non-compete, confidentiality, IP assignment, and dispute resolution, but does not mention health insurance or medical benefits.",
+      "citations": [],
+      "abstained": true
+    }
+  },
+  {
+    "question": "What happens if I leave before the training bond period?",
+    "response": {
+      "answer": "If you resign or are terminated for cause before completing the two-year bond period from the date of training completion, you would be liable to pay INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred by the Company.",
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 1050, "end": 1310, "page": 1},
+          "statute_id": null,
+          "quote": "In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred."
+        }
+      ],
+      "abstained": false
+    }
+  },
+  {
+    "question": "Can I work on my own startup while employed?",
+    "response": {
+      "answer": "This document does not explicitly address whether you may operate a personal business or startup during employment. The non-compete clause restricts competing activities after termination, and the IP assignment clause assigns work created during employment to the Company, but neither directly addresses concurrent personal business activities.",
+      "citations": [],
+      "abstained": true
+    }
+  },
+  {
+    "question": "Is there a relocation clause?",
+    "response": {
+      "answer": "This document does not contain any provision regarding relocation. There is no clause addressing transfers, reassignment to different offices, or relocation allowances.",
+      "citations": [],
+      "abstained": true
+    }
+  }
+]

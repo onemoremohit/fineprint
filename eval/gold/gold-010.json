@@ -1,0 +1,86 @@
+{
+  "doc_id": "gold-010",
+  "title": "Data Scientist Agreement \u2014 Tier 1",
+  "full_text": "DATA SCIENTIST AGREEMENT \u2014 TIER 1\n\nDate: 10th February 2025\nCompany: Enterprise Horizon 10 Pvt. Ltd.\nRole: Data Scientist\n\n1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 14,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.\n\n2. Probationary Period\nThe Employee shall remain on probation for six (6) months from the date of joining. Performance will be reviewed prior to confirmation.\n\n3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 60 days written notice or basic salary in lieu thereof.\n\n4. Service Commitment and Training Bond\nThe Employee agrees to remain in service for at least 18 months following completion of training. In the event of breach, Employee shall pay INR 1,50,000 as liquidated damages.\n\n5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.\n\n6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.\n\n7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Gurugram, Haryana have exclusive jurisdiction.\n\nSincerely,\nAuthorised Signatory\nEnterprise Horizon 10 Pvt. Ltd.",
+  "clauses": [
+    {
+      "heading": "1. Compensation and Benefits",
+      "text": "1. Compensation and Benefits\nThe Company shall pay the Employee a total compensation of INR 14,00,000 per annum, payable in monthly instalments subject to statutory tax deductions.",
+      "start": 123,
+      "end": 303,
+      "type": "compensation",
+      "risk_score": 1
+    },
+    {
+      "heading": "2. Probationary Period",
+      "text": "2. Probationary Period\nThe Employee shall remain on probation for six (6) months from the date of joining. Performance will be reviewed prior to confirmation.",
+      "start": 305,
+      "end": 463,
+      "type": "probation",
+      "risk_score": 2
+    },
+    {
+      "heading": "3. Notice Period and Separation",
+      "text": "3. Notice Period and Separation\nFollowing confirmation, either party may terminate employment by providing 60 days written notice or basic salary in lieu thereof.",
+      "start": 465,
+      "end": 627,
+      "type": "notice_period",
+      "risk_score": 2
+    },
+    {
+      "heading": "4. Service Commitment and Training Bond",
+      "text": "4. Service Commitment and Training Bond\nThe Employee agrees to remain in service for at least 18 months following completion of training. In the event of breach, Employee shall pay INR 1,50,000 as liquidated damages.",
+      "start": 629,
+      "end": 845,
+      "type": "training_bond",
+      "risk_score": 4
+    },
+    {
+      "heading": "5. Restrictive Covenant and Non-Compete",
+      "text": "5. Restrictive Covenant and Non-Compete\nFor 12 months following termination, the Employee agrees not to solicit clients or be employed by competing firms in India.",
+      "start": 847,
+      "end": 1010,
+      "type": "non_compete",
+      "risk_score": 5
+    },
+    {
+      "heading": "6. Confidentiality and Intellectual Property",
+      "text": "6. Confidentiality and Intellectual Property\nAll discoveries, software source codes, designs, and inventions created shall remain the exclusive proprietary property of the Company.",
+      "start": 1012,
+      "end": 1192,
+      "type": "ip_assignment",
+      "risk_score": 2
+    },
+    {
+      "heading": "7. Governing Law and Jurisdiction",
+      "text": "7. Governing Law and Jurisdiction\nThis contract shall be construed in accordance with the laws of India. Courts at Gurugram, Haryana have exclusive jurisdiction.",
+      "start": 1194,
+      "end": 1355,
+      "type": "jurisdiction",
+      "risk_score": 1
+    }
+  ],
+  "obligations": [
+    {
+      "party": "counterparty",
+      "action": "Pay compensation of INR 14,00,000 per annum",
+      "amount": "INR 14,00,000"
+    },
+    {
+      "party": "user",
+      "action": "Provide 60 days notice upon resignation"
+    },
+    {
+      "party": "user",
+      "action": "Pay liquidated damages of INR 1,50,000 if resigning before 18 months",
+      "amount": "INR 1,50,000"
+    }
+  ],
+  "unanswerable_questions": [
+    "Does Enterprise Horizon 10 Pvt. Ltd. provide free hot lunch in the office cafeteria?",
+    "What is the maternity leave stipend granted after 3 years?",
+    "Can employees bring pet rabbits to the Gurugram, Haryana office?",
+    "What was the annual audited gross revenue of the company?",
+    "Is free rooftop helicopter parking offered to engineers?"
+  ]
+}

@@ -1,0 +1,17 @@
+.gcloudignore
+.git
+.gitignore
+.env
+node_modules/
+frontend/node_modules/
+**/node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+eval/
+scratch/
+data/app.db
+data/cache/
+*.log

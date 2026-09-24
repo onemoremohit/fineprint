@@ -1,0 +1,380 @@
+{
+  "document_id": "doc-001",
+  "clauses": [
+    {
+      "id": "c-001",
+      "index": 0,
+      "heading": "Compensation",
+      "text": "The Company shall pay the Employee a gross annual salary of INR 8,00,000 (Rupees Eight Lakhs Only), payable in twelve equal monthly instalments, subject to applicable deductions.",
+      "span": {"start": 245, "end": 432, "page": 0},
+      "type": "compensation",
+      "burden_on": "counterparty",
+      "risk_score": 1,
+      "risk_reasons": ["Standard compensation clause"]
+    },
+    {
+      "id": "c-002",
+      "index": 1,
+      "heading": "Probation Period",
+      "text": "The Employee shall be on probation for a period of six (6) months from the date of joining. During the probation period, either party may terminate this agreement by giving fifteen (15) days written notice.",
+      "span": {"start": 434, "end": 655, "page": 0},
+      "type": "probation",
+      "burden_on": "mutual",
+      "risk_score": 2,
+      "risk_reasons": ["Standard probation period", "Notice period during probation is reasonable"]
+    },
+    {
+      "id": "c-003",
+      "index": 2,
+      "heading": "Notice Period",
+      "text": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. The Employee shall not be entitled to any notice pay-out if terminated for cause.",
+      "span": {"start": 657, "end": 903, "page": 1},
+      "type": "notice_period",
+      "burden_on": "mutual",
+      "risk_score": 3,
+      "risk_reasons": ["90 days is at the higher end for mid-level roles", "Asymmetric: employer can terminate for cause without notice pay"]
+    },
+    {
+      "id": "c-004",
+      "index": 3,
+      "heading": "Training Bond",
+      "text": "The Employee agrees to serve the Company for a minimum period of two (2) years from the date of completion of any training programme. In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred.",
+      "span": {"start": 905, "end": 1310, "page": 1},
+      "type": "training_bond",
+      "burden_on": "user",
+      "risk_score": 4,
+      "risk_reasons": [
+        "Two-year lock-in period restricts mobility",
+        "INR 3,00,000 penalty may be disproportionate to actual training costs",
+        "Bond applies even if terminated for cause — unusual provision",
+        "No cap on training cost or proportional reduction over time"
+      ]
+    },
+    {
+      "id": "c-005",
+      "index": 4,
+      "heading": "Non-Compete",
+      "text": "For a period of twelve (12) months following the termination of employment for any reason, the Employee shall not, directly or indirectly, engage in, be employed by, or provide services to any business that competes with the Company within India.",
+      "span": {"start": 1312, "end": 1579, "page": 1},
+      "type": "non_compete",
+      "burden_on": "user",
+      "risk_score": 5,
+      "risk_reasons": [
+        "12-month post-termination non-compete",
+        "Covers all of India — extremely broad geographic scope",
+        "Applies regardless of reason for termination",
+        "Likely unenforceable under Section 27 of the Indian Contract Act"
+      ]
+    },
+    {
+      "id": "c-006",
+      "index": 5,
+      "heading": "Confidentiality",
+      "text": "The Employee shall not, during the term of employment or at any time thereafter, disclose to any third party any confidential information, trade secrets, or proprietary data of the Company without prior written consent.",
+      "span": {"start": 1581, "end": 1811, "page": 2},
+      "type": "confidentiality",
+      "burden_on": "user",
+      "risk_score": 2,
+      "risk_reasons": ["Standard confidentiality clause", "Perpetual duration is common for trade secrets"]
+    },
+    {
+      "id": "c-007",
+      "index": 6,
+      "heading": "Intellectual Property Assignment",
+      "text": "All intellectual property, inventions, designs, and works created by the Employee during the course of employment shall be the sole and exclusive property of the Company. The Employee hereby assigns all rights, title, and interest in such works to the Company.",
+      "span": {"start": 1813, "end": 2097, "page": 2},
+      "type": "ip_assignment",
+      "burden_on": "user",
+      "risk_score": 3,
+      "risk_reasons": [
+        "Broad IP assignment covering all work during employment",
+        "Does not distinguish between work-related and personal projects",
+        "No carve-out for prior inventions"
+      ]
+    },
+    {
+      "id": "c-008",
+      "index": 7,
+      "heading": "Dispute Resolution",
+      "text": "Any dispute arising out of or in connection with this agreement shall be subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka.",
+      "span": {"start": 2099, "end": 2268, "page": 2},
+      "type": "jurisdiction",
+      "burden_on": "mutual",
+      "risk_score": 2,
+      "risk_reasons": ["Standard jurisdiction clause", "Single city jurisdiction may be inconvenient if employee is based elsewhere"]
+    }
+  ],
+  "baseline_verdicts": [
+    {
+      "clause_id": "c-003",
+      "verdict": "stricter_than_usual",
+      "baseline_id": "b-notice-period",
+      "baseline_text": "Either party may terminate this agreement by giving thirty (30) days written notice.",
+      "explanation": "A 90-day notice period is significantly longer than the typical 30-day standard for non-managerial roles. The asymmetric provision denying notice pay for cause-based termination adds further imbalance.",
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 657, "end": 903, "page": 1},
+          "statute_id": null,
+          "quote": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. The Employee shall not be entitled to any notice pay-out if terminated for cause."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-004",
+      "verdict": "stricter_than_usual",
+      "baseline_id": "b-training-bond",
+      "baseline_text": "The Employee agrees to serve the Company for a minimum period of one (1) year from the date of completion of training. In the event of early separation, the Employee shall repay a proportionate amount of the training costs.",
+      "explanation": "The two-year bond period is longer than the typical one-year standard. The fixed INR 3,00,000 penalty without proportional reduction is stricter than the usual proportionate repayment model.",
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 905, "end": 1310, "page": 1},
+          "statute_id": null,
+          "quote": "The Employee agrees to serve the Company for a minimum period of two (2) years from the date of completion of any training programme. In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-005",
+      "verdict": "unusual",
+      "baseline_id": "b-non-compete",
+      "baseline_text": "The Employee shall not engage in any competing business during the term of employment.",
+      "explanation": "Post-termination non-compete clauses are unusual in Indian employment agreements because they are generally void under Section 27 of the Indian Contract Act. The 12-month duration and pan-India geographic scope make this significantly broader than standard practice.",
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 1312, "end": 1579, "page": 1},
+          "statute_id": null,
+          "quote": "For a period of twelve (12) months following the termination of employment for any reason, the Employee shall not, directly or indirectly, engage in, be employed by, or provide services to any business that competes with the Company within India."
+        },
+        {
+          "kind": "statute",
+          "span": null,
+          "statute_id": "ica-s27",
+          "quote": "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-001",
+      "verdict": "standard",
+      "baseline_id": "b-compensation",
+      "baseline_text": "The Company shall pay the Employee a gross annual salary, payable in twelve equal monthly instalments, subject to applicable deductions.",
+      "explanation": "This is a standard compensation clause with typical monthly payment structure and deduction provisions.",
+      "citations": []
+    },
+    {
+      "clause_id": "c-002",
+      "verdict": "standard",
+      "baseline_id": "b-probation",
+      "baseline_text": "The Employee shall be on probation for a period of six (6) months. During probation, either party may terminate with fifteen (15) days notice.",
+      "explanation": "Six-month probation with 15-day notice is standard practice for most Indian employment agreements.",
+      "citations": []
+    },
+    {
+      "clause_id": "c-006",
+      "verdict": "standard",
+      "baseline_id": "b-confidentiality",
+      "baseline_text": "The Employee shall maintain confidentiality of all proprietary information during and after employment.",
+      "explanation": "Standard confidentiality obligation with perpetual duration, which is typical for trade secret protection.",
+      "citations": []
+    },
+    {
+      "clause_id": "c-007",
+      "verdict": "stricter_than_usual",
+      "baseline_id": "b-ip-assignment",
+      "baseline_text": "Intellectual property created in the course of employment and related to the Company's business shall belong to the Company.",
+      "explanation": "This clause assigns all IP created during employment without limiting scope to company-related work, and does not provide a carve-out for prior inventions or personal projects.",
+      "citations": []
+    },
+    {
+      "clause_id": "c-008",
+      "verdict": "standard",
+      "baseline_id": "b-jurisdiction",
+      "baseline_text": "Disputes shall be subject to the exclusive jurisdiction of the courts in [City], [State].",
+      "explanation": "Standard exclusive jurisdiction clause. The choice of Bengaluru courts is typical for companies headquartered there.",
+      "citations": []
+    }
+  ],
+  "enforceability_flags": [
+    {
+      "clause_id": "c-005",
+      "status": "likely_unenforceable",
+      "statute_ids": ["ica-s27"],
+      "explanation": "Post-termination non-compete clauses are generally void under Section 27 of the Indian Contract Act, 1872, which declares agreements in restraint of trade void to that extent. Indian courts have consistently held that post-employment non-compete restrictions are unenforceable, as distinguished from restraints during the term of employment.",
+      "ask_a_lawyer": [
+        "Whether this specific non-compete clause would be treated as void ab initio or partially severable",
+        "Whether the employer could argue this falls under a garden leave arrangement rather than a pure non-compete",
+        "Whether any state-specific employment legislation provides additional protections"
+      ],
+      "confidence": "high"
+    },
+    {
+      "clause_id": "c-004",
+      "status": "limited_enforceability",
+      "statute_ids": ["ica-s74"],
+      "explanation": "Under Section 74 of the Indian Contract Act, the stipulated amount of INR 3,00,000 as liquidated damages may be reduced by a court if it is found to be disproportionate to the actual loss suffered. Courts have consistently held that the party claiming damages must demonstrate reasonable relationship between the stipulated amount and actual training costs incurred.",
+      "ask_a_lawyer": [
+        "Whether the INR 3,00,000 amount bears reasonable relation to actual training costs",
+        "Whether a proportional reduction based on time served would apply",
+        "Whether the bond applying to termination-for-cause scenarios is enforceable",
+        "What documentation the employer would need to prove actual training costs"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "obligations": [
+    {
+      "clause_id": "c-002",
+      "who": "user",
+      "what": "Complete probation period",
+      "due": null,
+      "trigger": "6 months from date of joining",
+      "amount_inr": null,
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 434, "end": 548, "page": 0},
+          "statute_id": null,
+          "quote": "The Employee shall be on probation for a period of six (6) months from the date of joining."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-003",
+      "who": "user",
+      "what": "Provide 90 days written notice before resignation (after confirmation)",
+      "due": null,
+      "trigger": "On resignation after confirmation",
+      "amount_inr": null,
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 657, "end": 795, "page": 1},
+          "statute_id": null,
+          "quote": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-003",
+      "who": "counterparty",
+      "what": "Provide 90 days written notice or three months' salary in lieu before termination",
+      "due": null,
+      "trigger": "On termination without cause after confirmation",
+      "amount_inr": null,
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 657, "end": 795, "page": 1},
+          "statute_id": null,
+          "quote": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-004",
+      "who": "user",
+      "what": "Serve minimum 2 years from completion of training programme",
+      "due": null,
+      "trigger": "On completion of any training programme",
+      "amount_inr": null,
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 905, "end": 1050, "page": 1},
+          "statute_id": null,
+          "quote": "The Employee agrees to serve the Company for a minimum period of two (2) years from the date of completion of any training programme."
+        }
+      ]
+    },
+    {
+      "clause_id": "c-004",
+      "who": "user",
+      "what": "Pay INR 3,00,000 as liquidated damages if bond is breached",
+      "due": null,
+      "trigger": "On resignation or termination for cause before bond period completion",
+      "amount_inr": 300000.0,
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 1050, "end": 1310, "page": 1},
+          "statute_id": null,
+          "quote": "In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred."
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "f-001",
+      "title": "Post-Termination Non-Compete Is Likely Void",
+      "tier": "general_law",
+      "body": "The non-compete clause (Clause 5) restricts you from working in any competing business across India for 12 months after leaving. Under Section 27 of the Indian Contract Act, 1872, agreements in restraint of trade are void to that extent. Indian courts have consistently distinguished between non-compete obligations during employment (generally permissible) and those that extend beyond the employment term (generally void).",
+      "clause_ids": ["c-005"],
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 1312, "end": 1579, "page": 1},
+          "statute_id": null,
+          "quote": "For a period of twelve (12) months following the termination of employment for any reason, the Employee shall not, directly or indirectly, engage in, be employed by, or provide services to any business that competes with the Company within India."
+        },
+        {
+          "kind": "statute",
+          "span": null,
+          "statute_id": "ica-s27",
+          "quote": "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "f-002",
+      "title": "Training Bond Penalty May Be Disproportionate",
+      "tier": "general_law",
+      "body": "The training bond (Clause 4) requires payment of INR 3,00,000 if you leave within two years of training. Under Section 74 of the Indian Contract Act, a court may reduce this amount if it is disproportionate to the actual training costs incurred by the employer. The employer would need to demonstrate that the stipulated amount reasonably reflects actual expenses.",
+      "clause_ids": ["c-004"],
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 1050, "end": 1310, "page": 1},
+          "statute_id": null,
+          "quote": "In the event the Employee resigns or is terminated for cause before the completion of the bond period, the Employee shall be liable to pay the Company an amount of INR 3,00,000 (Rupees Three Lakhs Only) as liquidated damages towards training costs incurred."
+        },
+        {
+          "kind": "statute",
+          "span": null,
+          "statute_id": "ica-s74",
+          "quote": "When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, the party complaining of the breach is entitled, whether or not actual damage or loss is proved to have been caused thereby, to receive from the party who has broken the contract reasonable compensation not exceeding the amount so named."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "f-003",
+      "title": "Notice Period Is 90 Days — Longer Than Typical",
+      "tier": "document_says",
+      "body": "After confirmation, resignation requires 90 days' written notice or forfeiture of three months' salary. This is significantly longer than the 30-day standard common in non-managerial roles. Additionally, if terminated for cause, you would not receive any notice pay-out — this creates an asymmetry in the notice provisions.",
+      "clause_ids": ["c-003"],
+      "citations": [
+        {
+          "kind": "document",
+          "span": {"start": 657, "end": 903, "page": 1},
+          "statute_id": null,
+          "quote": "After confirmation, either party may terminate this agreement by giving ninety (90) days written notice or three months' salary in lieu thereof. The Employee shall not be entitled to any notice pay-out if terminated for cause."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "f-004",
+      "title": "Consider Negotiating These Three Points",
+      "tier": "option",
+      "body": "Based on the analysis, three areas present the most significant exposure:\n\n1. **Non-compete clause (Clause 5)**: One option is to request removal of the post-termination restriction entirely, or to limit it to direct competitors and a specific city. While this clause may be void under Indian law, its presence could create uncertainty.\n\n2. **Training bond amount (Clause 4)**: One option is to request a proportional reduction mechanism — for example, if you complete 18 of 24 months, the recoverable amount reduces by 75%. Another option is to request an itemized breakdown of the training costs the bond covers.\n\n3. **Notice period (Clause 3)**: One option is to negotiate the notice period down to 60 days, which remains reasonable while giving you more flexibility.\n\nThese are options to consider, not directives. Confirm with a lawyer before making requests.",
+      "clause_ids": ["c-005", "c-004", "c-003"],
+      "citations": [],
+      "verified": true
+    }
+  ]
+}

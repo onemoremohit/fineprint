@@ -1,0 +1,159 @@
+[
+  {
+    "id": "ica-s27",
+    "act": "Indian Contract Act, 1872",
+    "section": "27",
+    "heading": "Agreement in restraint of trade, void",
+    "bare_text": "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void. Exception 1.—Saving of agreement not to carry on business of which goodwill is sold.—One who sells the goodwill of a business may agree with the buyer to refrain from carrying on a similar business, within specified local limits, so long as the buyer, or any person deriving title to the goodwill from him, carries on a like business therein, provided that such limits appear to the Court reasonable, regard being had to the nature of the business.",
+    "plain_summary": "Any agreement that prevents someone from practising their profession, trade or business is void to that extent. The only exception is when the seller of a business's goodwill agrees not to compete within reasonable limits.",
+    "applies_to_clause_types": ["non_compete", "non_solicit"],
+    "effect": "likely_unenforceable",
+    "caveats": [
+      "Restraints operating during the term of employment are treated differently from post-termination restraints",
+      "Does not apply to the statutory exception for sale of goodwill",
+      "Indian courts have consistently distinguished between during-employment and post-employment non-competes",
+      "Confidentiality obligations are treated separately from non-compete restrictions"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "ica-s73",
+    "act": "Indian Contract Act, 1872",
+    "section": "73",
+    "heading": "Compensation for loss or damage caused by breach of contract",
+    "bare_text": "When a contract has been broken, the party who suffers by such breach is entitled to receive, as compensation for any loss or damage caused to him thereby, such compensation as naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it. Such compensation is not to be given for any remote and indirect loss or damage sustained by reason of the breach.",
+    "plain_summary": "When a contract is broken, the injured party can receive compensation for losses that naturally arise from the breach, or losses both parties knew would likely result. Remote or indirect losses are not compensable.",
+    "applies_to_clause_types": ["penalty_liquidated_damages", "indemnity", "training_bond"],
+    "effect": "likely_enforceable",
+    "caveats": [
+      "Compensation must be for actual loss, not punitive",
+      "The party claiming damages bears the burden of proving actual loss",
+      "This section works in conjunction with Section 74 for liquidated damages"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "ica-s74",
+    "act": "Indian Contract Act, 1872",
+    "section": "74",
+    "heading": "Compensation for breach of contract where penalty stipulated for",
+    "bare_text": "When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, or if the contract contains any other stipulation by way of penalty, the party complaining of the breach is entitled, whether or not actual damage or loss is proved to have been caused thereby, to receive from the party who has broken the contract reasonable compensation not exceeding the amount so named or, as the case may be, the penalty stipulated for.",
+    "plain_summary": "When a contract specifies a sum to be paid on breach (liquidated damages or penalty), the injured party is entitled to reasonable compensation not exceeding that amount. The court can reduce the amount if it considers the stipulated sum disproportionate.",
+    "applies_to_clause_types": ["penalty_liquidated_damages", "training_bond", "indemnity"],
+    "effect": "limited_enforceability",
+    "caveats": [
+      "Courts may reduce the stipulated amount to what they consider reasonable compensation",
+      "The party claiming damages must show the sum is a genuine pre-estimate of loss, not a penalty",
+      "The Supreme Court in ONGC v. Saw Pipes (2003) held that liquidated damages are enforceable if they represent genuine pre-estimate of loss",
+      "Training bond amounts are frequently scrutinized under this section"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "ica-s16",
+    "act": "Indian Contract Act, 1872",
+    "section": "16",
+    "heading": "Undue influence",
+    "bare_text": "(1) A contract is said to be induced by 'undue influence' where the relations subsisting between the parties are such that one of the parties is in a position to dominate the will of the other and uses that position to obtain an unfair advantage over the other. (2) In particular and without prejudice to the generality of the foregoing principle, a person is deemed to be in a position to dominate the will of another— (a) where he holds a real or apparent authority over the other, or where he stands in a fiduciary relation to the other; or (b) where he makes a contract with a person whose mental capacity is temporarily or permanently affected by reason of age, illness, or mental or bodily distress.",
+    "plain_summary": "A contract is voidable if one party uses their dominant position (such as authority or fiduciary relationship) to gain an unfair advantage. The employer-employee relationship, especially at hiring, can create such a power imbalance.",
+    "applies_to_clause_types": ["training_bond", "penalty_liquidated_damages", "non_compete"],
+    "effect": "limited_enforceability",
+    "caveats": [
+      "The burden of proving undue influence lies on the party claiming it",
+      "Employment contexts often involve inherent power imbalance at the time of signing",
+      "This section is typically invoked alongside other grounds, not in isolation"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "ica-s23",
+    "act": "Indian Contract Act, 1872",
+    "section": "23",
+    "heading": "What considerations and objects are lawful, and what not",
+    "bare_text": "The consideration or object of an agreement is lawful, unless— it is forbidden by law; or is of such a nature that, if permitted, it would defeat the provisions of any law; or is fraudulent; or involves or implies, injury to the person or property of another; or the Court regards it as immoral, or opposed to public policy. In each of these cases, the consideration or object of an agreement is said to be unlawful. Every agreement of which the object or consideration is unlawful is void.",
+    "plain_summary": "An agreement is void if its object or consideration is unlawful — specifically if it is forbidden by law, defeats any law, is fraudulent, causes injury, or is against public policy.",
+    "applies_to_clause_types": ["non_compete", "penalty_liquidated_damages", "training_bond"],
+    "effect": "likely_unenforceable",
+    "caveats": [
+      "Courts have wide discretion in determining what is 'opposed to public policy'",
+      "This section provides a broad ground for challenging onerous clauses",
+      "The threshold for invoking public policy is high"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "sra-s14",
+    "act": "Specific Relief Act, 1963",
+    "section": "14",
+    "heading": "Contracts not specifically enforceable",
+    "bare_text": "The following contracts cannot be specifically enforced, namely:— (a) where a party to the contract has obtained substituted performance of contract; (b) a contract which runs into such minute or numerous details or which is so dependent on the personal qualifications or volition of the parties, or otherwise from its nature is such, that the court cannot enforce specific performance of its material terms; (c) a contract which is in its nature determinable; (d) a contract the performance of which involves the performance of a continuous duty which the court cannot supervise.",
+    "plain_summary": "Certain types of contracts cannot be specifically enforced by courts, including those requiring continuous supervision, those dependent on personal qualifications, and those that are determinable in nature.",
+    "applies_to_clause_types": ["non_compete", "non_solicit", "confidentiality"],
+    "effect": "limited_enforceability",
+    "caveats": [
+      "This section means courts generally cannot force an employee to continue working",
+      "It limits the employer's remedy to damages rather than specific performance",
+      "Personal service contracts are a classic example of non-specifically enforceable contracts"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "sra-s41",
+    "act": "Specific Relief Act, 1963",
+    "section": "41",
+    "heading": "Injunction to perform negative agreement",
+    "bare_text": "An injunction cannot be granted— (a) to restrain any person from prosecuting a judicial proceeding pending at the institution of the suit in which the injunction is sought, unless such restraint is necessary to prevent a multiplicity of proceedings; (b) to restrain any person from instituting or prosecuting any proceeding in a court not subordinate to that from which the injunction is sought; (c) to restrain any person from applying to any legislative body; (d) to restrain any person from instituting or prosecuting any proceeding in a criminal matter; (e) to prevent the breach of a contract the performance of which would not be specifically enforced.",
+    "plain_summary": "Courts generally cannot grant injunctions to prevent breach of contracts that cannot be specifically enforced. This means courts typically cannot restrain a former employee from taking up new employment.",
+    "applies_to_clause_types": ["non_compete", "non_solicit"],
+    "effect": "likely_unenforceable",
+    "caveats": [
+      "This reinforces that post-employment non-compete injunctions are generally not available",
+      "Courts may still grant injunctions to protect trade secrets and confidential information",
+      "The distinction between restraining employment vs. restraining misuse of confidential information is important"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "se-notice",
+    "act": "State Shops & Establishments Acts (General Provisions)",
+    "section": "Various",
+    "heading": "Notice period requirements for establishments",
+    "bare_text": "Most state Shops and Establishments Acts require a minimum notice period of 30 days for termination of employment by either party. Some states specify shorter periods for employees who have served less than a specified duration.",
+    "plain_summary": "State-level Shops & Establishments Acts typically mandate a minimum 30-day notice period for termination. Contractual notice periods cannot be shorter than the statutory minimum, though they can be longer.",
+    "applies_to_clause_types": ["notice_period", "termination"],
+    "effect": "likely_enforceable",
+    "caveats": [
+      "Specific provisions vary by state — check the applicable state legislation",
+      "The statutory minimum acts as a floor, not a ceiling",
+      "Some states have different requirements for different categories of employees",
+      "Probationary employees may have different notice requirements"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  },
+  {
+    "id": "pow-deductions",
+    "act": "Payment of Wages Act, 1936",
+    "section": "7",
+    "heading": "Deductions which may be made from wages",
+    "bare_text": "The total amount of deductions which may be made under sub-section (2) in any wage-period from the wages of any employed person shall not exceed— (i) in cases where such deductions are wholly or partly made for payments to co-operative societies under clause (j) of sub-section (2), seventy-five per cent. of such wages, and (ii) in any other case, fifty per cent. of such wages.",
+    "plain_summary": "Deductions from an employee's wages are limited — generally no more than 50% of wages in a wage period, or 75% if co-operative society payments are included. Training bond recoveries that result in deductions exceeding these limits may be challenged.",
+    "applies_to_clause_types": ["training_bond", "penalty_liquidated_damages", "compensation"],
+    "effect": "limited_enforceability",
+    "caveats": [
+      "This applies to wage deductions, not necessarily to separate damage claims",
+      "The employer cannot unilaterally deduct bond amounts exceeding the statutory cap",
+      "The applicability depends on whether the employee falls within the Act's coverage (wage ceiling)",
+      "Post-2017 amendments expanded coverage to higher wage categories"
+    ],
+    "verified_by": "Legal Research Team",
+    "verified_on": "2025-01-15"
+  }
+]
